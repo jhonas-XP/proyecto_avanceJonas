@@ -1,0 +1,307 @@
+*
+{    
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+/* "AQUI EMPIEZA TODO EL CONTENIDO DEL HEADER" */
+
+/*con esta clase ocultamos contenido que se muestra en el boton de navegacion para celular*/
+.meno_flex
+{
+    position: absolute;
+    top: 0px;
+    visibility:hidden;    
+}
+/*con esta clase controlamos el color del header y el tamaño del logo*/
+.logo
+{    
+    padding: 5px 5px 10px 60px;           
+    float: none;    
+    background-repeat: no-repeat;                
+    background: rgb(0, 0, 0);
+}
+/*con esta clase controlamos el menu de navegacion, la posicion*/
+.menu
+{
+    position: absolute;
+    top: 60px;
+    right: 3%;    
+}
+/*con esta opcion controlamos las letras del menu de navegacion y que el submenu se mantenga en bloque debajo de cada opcion*/
+li > a
+{       
+    display: inline-block;
+    color:#ffffff;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 10px 10px 10px;
+}
+/*con esta clase dentro de la lista controlamos la posicion en la que se ven la letras si en bloque o en linea*/
+.menu > li
+{    
+    display: inline-block;    
+}
+/*con esta clase dentro de la lista controlamos el color que se muestra en cada opcion del menu al pasar el mouse por encima funciona tanto para el menu como el sub menu */
+.navegation li > a:hover
+{    
+    color:  #000000;  
+    background: #12C6BB;    
+}
+/*con esta clase controlamos el sub menu, la posicion los bordes el estilo la visibilidad entre otros */
+.submenu
+{
+    list-style: none;
+    position: absolute;   
+    background:rgb(255, 255, 255) ;
+    border: 3px groove #000;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+/*con esta clase controlamos la lista del submenu centreando las letras y dandole un color */
+.submenu li a 
+{
+    display: block;   
+    padding: 15px 0px 0px 0px;
+    color: rgb(0, 0, 0);    
+}
+/*con este comando controlamos que el submenu desplegable sea visible y se vea claro*/
+li:hover .submenu
+{
+    visibility: visible;
+    opacity: 1;
+}
+/* "AQUI EMPIEZA TODO EL CONTENIDO DEL MAIN" */
+.title
+{
+    text-align: center;    
+}
+.parallax {
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url(../image/imageParallax/tigre.jpg);
+    width: 100%;
+    height: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* "VISTA PARA UNA TABLET" */
+
+/* "MEDIA QUERY CON UN TAMAÑO DE 1023 PX"*/
+@media screen and (max-width: 1023px)
+{
+    /* "AQUI EMPIEZA TODO EL CONTENIDO DEL HEADER" */
+
+    /*con esta clase controlamos la posicion del logo y el tañano que tendra en header y el color de fondo*/
+    .logo 
+    {           
+        padding: 0px 10px 85px 0px;  
+        text-align: center;                    
+        background: rgb(0, 0, 0);        
+    }
+    /*con esta clase controlamos la posicion en la que ira el menu y lo separado que va estar de*/
+    .navegation ul 
+    {   
+        text-align: center; 
+        margin-top: 40px;
+    }
+    li > a
+    {           
+        padding: 15px 15px 15px 15px;           
+        color:#fdfdfd;        
+        text-align: center;
+        text-decoration: none;
+    }
+    .menu
+    {
+        position: absolute;
+        top: 130px;
+        left: 0%;
+        text-align: right;
+        visibility: visible;    
+        display:block; 
+        text-align: right;
+    }
+    .menu > li
+    {    
+        text-align: center;                   
+    }    
+    .navegation li a:hover
+    {
+        color: #000000;  
+        top: 20%;
+    }
+    .submenu
+    {
+        list-style: none;
+        position: absolute;  
+        top: 13px;
+        left: center;
+        background:rgb(255, 255, 255) ;
+        border: 3px groove #000;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+    .submenu li a 
+    {
+        display: block;   
+        padding: 15px 5px 0px 5px;
+        color: rgb(0, 0, 0);    
+    }
+    
+   
+}
+
+
+
+
+
+
+
+
+/* "VISTA PARA UN CELULAR" */
+
+
+@media screen and (max-width: 768px)
+{   
+    /* "AQUI EMPIEZA TODO EL CONTENIDO DEL HEADER" */ 
+
+    .navegation
+    {           
+        background: rgb(0, 0, 0);
+        margin-top: 0px;
+        margin: 0px 0% 5% 0px;
+    }
+    .logo 
+    {           
+        padding: 0px 10px 85px 0px;  
+        text-align: center;                    
+        background: rgb(0, 0, 0);        
+    }
+    .menu > li
+    {    
+        visibility: hidden;                  
+    } 
+    .meno_flex
+    {
+        visibility: visible;
+    }
+    #btn
+    {
+        display: none;
+        
+    }
+    div label, .icon-menu  
+    {
+        
+        position:relative;
+        top: 55%;
+        left: 10%;        
+    }    
+    /*.submenu
+    {
+        list-style: none;
+        position: absolute; 
+        color: rgb(0, 0, 0);   
+        background:rgb(255, 255, 255) ;
+        border: 3px groove #000;          
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+    .submenu li a 
+    {
+        display: block;
+        width: 100%;
+        padding: 15px 15px 1px 0px;
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+    li:hover .submenu
+    {
+        visibility: visible;
+        opacity: 1;
+    } */
+    
+    .icon-menu
+    {       
+        display: flex;
+        justify-content: space-around;
+       /* padding: 10px 10px 10px 10px; */
+        transition: all 500ms ease;
+        position: absolute;
+        top:155px ;
+        left:100% ;                
+        background: #df0808;
+        font-size: 35px;        
+        color: #10aed6;
+        border-radius: 10%;
+    }   
+    .btn
+    {
+        position: absolute;
+        top: 30px;
+        left: 703px;
+        text-align: right;
+        visibility: visible;    
+        display:block; 
+        text-align: right;
+    }
+    .meno1
+    {
+        list-style: none;
+        position: absolute; 
+        padding: 0px 318.9px 10px 319px;
+        top: 181px;
+        left:0px ;
+        color: rgb(0, 0, 0);   
+        background:rgb(255, 255, 255) ;
+        border: 3px groove #000; 
+        text-align: center;         
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.5s;
+        border: 2px solid black;
+    }
+    .meno1 li a
+    {
+        display: block;
+        width: 100%;
+        padding: 15px 15px 1px 0px;
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+    li:hover .meno1
+    {
+        visibility: visible;
+        opacity: 1;
+    }      
+    #btn:checked~ .opciones_flex ul 
+    {
+        margin-bottom: -30px;
+        opacity: 1;
+        visibility: visible;
+    }
+    /*
+    #btn:checked~ .btn .icon-menu
+    {
+        transform: rotate(90deg);
+        font-size: 20px;
+        padding: 10px 10px 10px 10px; 
+        font-size: 35px;    
+    }*/
+}
