@@ -61,7 +61,12 @@ ul.show
 {
     top: 65px;    
 }
-@media screen and (max-width: 1014px)
+
+
+/* "VISTA PARA UNA TABLET" */
+
+
+@media screen and (max-width: 1023px)
 {
     .menu
     {
@@ -106,8 +111,11 @@ ul.show
         background: #d60404;
         transition: .4s; 
         color: #000000;  
-    }   
-    
+    }    
+    ul.show
+    {
+        top: 65px;    
+    }
 }
 @media screen and (max-width: 952px)
 {
@@ -122,8 +130,9 @@ ul.show
     }
 }
 
+/* "VISTA PARA UN CELULAR" */
 
-@media screen and (max-width: 858px)
+@media screen and (max-width: 768px)
 {
     .menu
     {
@@ -146,7 +155,7 @@ ul.show
         padding: 15px;
         position: fixed;
         width:100vw;
-        height: calc(100% - 100px);
+        height: calc(100% - 90px);
         background: #414141;
         top: -5000vw;
         text-align: center;
