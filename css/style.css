@@ -1,79 +1,169 @@
-*
-{    
-    margin: 0;
-    padding: 0; 
-    box-sizing: border-box;
-}
-
-/* "AQUI EMPIEZA TODO EL CONTENIDO DEL HEADER" */
-
-/*con esta clase ocultamos contenido que se muestra en el boton de navegacion para celular*/
-.meno_flex
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+*, *::before, *::after
 {
-    position: absolute;
-    top: 0px;
-    visibility:hidden;    
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Serif', serif;
 }
-/*con esta clase controlamos el color del header y el tamaño del logo*/
-.logo
-{    
-    padding: 5px 5px 10px 60px;           
-    float: none;    
-    background-repeat: no-repeat;                
-    background: rgb(0, 0, 0);
-}
-/*con esta clase controlamos el menu de navegacion, la posicion*/
 .menu
 {
-    position: absolute;
-    top: 60px;
-    right: 3%;    
+    background-color: #000000;
+    height: 180px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    box-shadow: 5px 0 10px rgb(0, 0, 0);
 }
-/*con esta opcion controlamos las letras del menu de navegacion y que el submenu se mantenga en bloque debajo de cada opcion*/
-li > a
-{       
-    display: inline-block;
-    color:#ffffff;
-    font-size: 20px;
-    text-align: center;
-    text-decoration: none;
-    padding: 10px 10px 10px 10px;
-}
-/*con esta clase dentro de la lista controlamos la posicion en la que se ven la letras si en bloque o en linea*/
-.menu > li
-{    
-    display: inline-block;    
-}
-/*con esta clase dentro de la lista controlamos el color que se muestra en cada opcion del menu al pasar el mouse por encima funciona tanto para el menu como el sub menu */
-.navegation li > a:hover
-{    
-    color:  #000000;  
-    background: #12C6BB;    
-}
-/*con esta clase controlamos el sub menu, la posicion los bordes el estilo la visibilidad entre otros */
-.submenu
+.logo
 {
+    background: rgb(0, 0, 0);        
+    padding: 5px 30px;
+    font-weight: bold;
+}
+.menu_items
+{
+    display: flex;
     list-style: none;
-    position: absolute;   
-    background:rgb(255, 255, 255) ;
-    border: 3px groove #000;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.5s;
+    margin-right: -10px;
 }
-/*con esta clase controlamos la lista del submenu centreando las letras y dandole un color */
-.submenu li a 
+.menu_items li 
 {
-    display: block;   
-    padding: 15px 0px 0px 0px;
-    color: rgb(0, 0, 0);    
+    border-radius: 3px;
+    margin: 0 5px;
 }
-/*con este comando controlamos que el submenu desplegable sea visible y se vea claro*/
-li:hover .submenu
+.menu_items li a 
 {
-    visibility: visible;
-    opacity: 1;
+    padding: 7px 13px;
+    text-decoration:none;
+    display: block;
+    text-transform: uppercase;
+    color: #fff;
 }
+.menu_items li:hover, li.active
+{
+    background: #12c6ba;
+    transition: .4s; 
+    color: #000000;  
+}
+.btn_menu
+{
+    margin-right: 30px;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+ul.show
+{
+    top: 65px;    
+}
+@media screen and (max-width: 952px)
+{
+    .logo
+    {
+        font-size: 30px;
+        padding-left:35px ;
+    }
+    .menu_items li a
+    {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 858px)
+{
+    .menu
+    {
+        height: 100px;
+    }
+    .btn_menu
+    {
+        display: inline-flex;
+    }
+    .menu_items
+    {
+        margin-top: 34px;
+        padding: 15px;
+        position: fixed;
+        width:100vw;
+        height: calc(100% - 100px);
+        background: #414141;
+        top: -5000vw;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+    }
+    .menu_items li 
+    {
+        margin: 30px 0 0 0;
+        line-height: 40px;
+    }
+    .menu_items li:hover
+    {
+        background: none;
+    }
+    .menu_items li a 
+    {
+        font-size: 20px;
+        color: #fff;
+        font-weight: bold;
+    }
+    .menu_items li a:hover
+    {
+        color: #e9183b;
+    }
+    .logo img
+    {
+        width:300px;             
+        padding: 0px 40px;
+        font-weight: bold;
+    }
+}
+@media screen and (max-width: 858px) and (orientation: landscape) 
+{
+    .menu_items li 
+    {
+        margin: 5px 0 0 0;
+    }
+    .menu_items
+    {
+        overflow: scroll;
+        height: calc(100%-65px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* "AQUI EMPIEZA TODO EL CONTENIDO DEL MAIN" */
 .title
 {
@@ -85,223 +175,4 @@ li:hover .submenu
     background-image: url(../image/imageParallax/tigre.jpg);
     width: 100%;
     height: 200px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* "VISTA PARA UNA TABLET" */
-
-/* "MEDIA QUERY CON UN TAMAÑO DE 1023 PX"*/
-@media screen and (max-width: 1023px)
-{
-    /* "AQUI EMPIEZA TODO EL CONTENIDO DEL HEADER" */
-
-    /*con esta clase controlamos la posicion del logo y el tañano que tendra en header y el color de fondo*/
-    .logo 
-    {           
-        padding: 0px 10px 85px 0px;  
-        text-align: center;                    
-        background: rgb(0, 0, 0);        
-    }
-    /*con esta clase controlamos la posicion en la que ira el menu y lo separado que va estar de*/
-    .navegation ul 
-    {   
-        text-align: center; 
-        margin-top: 40px;
-    }
-    li > a
-    {           
-        padding: 15px 15px 15px 15px;           
-        color:#fdfdfd;        
-        text-align: center;
-        text-decoration: none;
-    }
-    .menu
-    {
-        position: absolute;
-        top: 130px;
-        left: 0%;
-        text-align: right;
-        visibility: visible;    
-        display:block; 
-        text-align: right;
-    }
-    .menu > li
-    {    
-        text-align: center;                   
-    }    
-    .navegation li a:hover
-    {
-        color: #000000;  
-        top: 20%;
-    }
-    .submenu
-    {
-        list-style: none;
-        position: absolute;  
-        top: 13px;
-        left: center;
-        background:rgb(255, 255, 255) ;
-        border: 3px groove #000;
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 0.5s;
-    }
-    .submenu li a 
-    {
-        display: block;   
-        padding: 15px 5px 0px 5px;
-        color: rgb(0, 0, 0);    
-    }
-    
-   
-}
-
-
-
-
-
-
-
-
-/* "VISTA PARA UN CELULAR" */
-
-
-@media screen and (max-width: 768px)
-{   
-    /* "AQUI EMPIEZA TODO EL CONTENIDO DEL HEADER" */ 
-
-    .navegation
-    {           
-        background: rgb(0, 0, 0);
-        margin-top: 0px;
-        margin: 0px 0% 5% 0px;
-    }
-    .logo 
-    {           
-        padding: 0px 10px 85px 0px;  
-        text-align: center;                    
-        background: rgb(0, 0, 0);        
-    }
-    .menu > li
-    {    
-        visibility: hidden;                  
-    } 
-    .meno_flex
-    {
-        visibility: visible;
-    }
-    #btn
-    {
-        display: none;
-        
-    }
-    div label, .icon-menu  
-    {
-        
-        position:relative;
-        top: 55%;
-        left: 10%;        
-    }    
-    /*.submenu
-    {
-        list-style: none;
-        position: absolute; 
-        color: rgb(0, 0, 0);   
-        background:rgb(255, 255, 255) ;
-        border: 3px groove #000;          
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 0.5s;
-    }
-    .submenu li a 
-    {
-        display: block;
-        width: 100%;
-        padding: 15px 15px 1px 0px;
-        color: rgb(0, 0, 0);
-        text-align: center;
-    }
-    li:hover .submenu
-    {
-        visibility: visible;
-        opacity: 1;
-    } */
-    
-    .icon-menu
-    {       
-        display: flex;
-        justify-content: space-around;
-       /* padding: 10px 10px 10px 10px; */
-        transition: all 500ms ease;
-        position: absolute;
-        top:155px ;
-        left:100% ;                
-        background: #df0808;
-        font-size: 35px;        
-        color: #10aed6;
-        border-radius: 10%;
-    }   
-    .btn
-    {
-        position: absolute;
-        top: 30px;
-        left: 703px;
-        text-align: right;
-        visibility: visible;    
-        display:block; 
-        text-align: right;
-    }
-    .meno1
-    {
-        list-style: none;
-        position: absolute; 
-        padding: 0px 318.9px 10px 319px;
-        top: 181px;
-        left:0px ;
-        color: rgb(0, 0, 0);   
-        background:rgb(255, 255, 255) ;
-        border: 3px groove #000; 
-        text-align: center;         
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 0.5s;
-        border: 2px solid black;
-    }
-    .meno1 li a
-    {
-        display: block;
-        width: 100%;
-        padding: 15px 15px 1px 0px;
-        color: rgb(0, 0, 0);
-        text-align: center;
-    }
-    li:hover .meno1
-    {
-        visibility: visible;
-        opacity: 1;
-    }      
-    #btn:checked~ .opciones_flex ul 
-    {
-        margin-bottom: -30px;
-        opacity: 1;
-        visibility: visible;
-    }
-    /*
-    #btn:checked~ .btn .icon-menu
-    {
-        transform: rotate(90deg);
-        font-size: 20px;
-        padding: 10px 10px 10px 10px; 
-        font-size: 35px;    
-    }*/
 }
