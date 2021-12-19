@@ -119,14 +119,23 @@ ul.show
 }
 @media screen and (max-width: 952px)
 {
-    .logo
+    .logo img
     {
-        font-size: 30px;
-        padding-left:35px ;
+        background-color: rgba(0, 0, 0, 0);
+        position: absolute;
+        top: 1px;
+        left:50px ;
+        width: 250px;
+        font-size: 3px;
+        padding-left:5px ;
     }
     .menu_items li a
     {
         font-size: 16px;
+    }
+    .btn_menu
+    {
+        display: inline-flex;
     }
 }
 
@@ -191,7 +200,7 @@ ul.show
         font-weight: bold;
     }
 }
-@media screen and (max-width: 858px) and (orientation: landscape) 
+@media screen and (max-width: 768px) and (orientation: landscape) 
 {
     .menu_items li 
     {
@@ -216,23 +225,49 @@ ul.show
         border-bottom: 1px solid #fff;
         box-shadow: 5px 0 10px rgb(0, 0, 0);
     }
+    .menu_items
+    {
+        margin-top: 34px;
+        padding: 15px;
+        position: fixed;
+        width:100vw;
+        height: calc(100% - 90px);
+        background: #414141;
+        top: -5000vw;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+    }
 }
 
 
 
-@media screen and (max-width: 412px)  
+@media screen and (min-width: 428px)  
 {
     .menu
     {
         background-color: #000000;
         height: 90px;
-        width: 142vw;
+        width: 162vw;
         display: flex;
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid #fff;
         box-shadow: 5px 0 10px rgb(0, 0, 0);
     } 
+    .menu_items
+    {
+        margin-top: 55px;
+        padding: 15px;
+        position: fixed;
+        width:100vw;
+        height: calc(100% - 90px);
+        background: #414141;
+        top: -5000vw;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+    }
 }
 /*
 @media screen and (min-width: 66px)  
@@ -240,11 +275,7 @@ ul.show
     .menu
     {
         height: 65px;
-    }
-    .btn_menu
-    {
-        display: inline-flex;
-    }
+    }    
     .menu_items
     {
         margin-top: 34px;
@@ -257,31 +288,6 @@ ul.show
         text-align: center;
         transition: all .4s;
         flex-direction: column;
-    }
-    .menu_items li 
-    {
-        margin: 30px 0 0 0;
-        line-height: 40px;
-    }
-    .menu_items li:hover
-    {
-        background: none;
-    }
-    .menu_items li a 
-    {
-        font-size: 20px;
-        color: #fff;
-        font-weight: bold;
-    }
-    .menu_items li a:hover
-    {
-        color: #e9183b;
-    }
-    .logo img
-    {
-        width:300px;             
-        padding: 0px 40px;
-        font-weight: bold;
     }
 }*/
 
