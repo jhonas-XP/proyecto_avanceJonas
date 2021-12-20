@@ -44,11 +44,6 @@ header label
     border-radius: 3px;
     border: 3px solid #000;
 }
-.nav_menu .sub 
-{
-    
-    /*top: 60px;*/
-}
 .sub a
 {
     color: black;    
@@ -91,7 +86,7 @@ header label
         
     display: block;
     position: absolute; 
-    top: 62px;   
+    top: 61px;   
     color: black;
 } 
 .nav  li:hover
