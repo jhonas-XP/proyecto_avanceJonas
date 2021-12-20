@@ -1,4 +1,4 @@
-$("sub").click(function()
+$(".nav").click(function()
 {
-    $(this).children("ul").slideToggle();
+    $(this).children("li").slideToggle();
 })
