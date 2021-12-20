@@ -34,8 +34,12 @@ header label
 {
     padding: 20px;
     display: none;
-    background: rgb(44, 40, 40);
-    text-align: center;
+    background: rgb(255, 255, 255);
+    text-align: center;   
+    border: 5px solid #000;
+}
+.sub a
+{
     color: black;
 }
 .nav_cont
@@ -75,7 +79,7 @@ header label
 } 
 .nav a:hover
 {
-    background: #FAFAFA;
+    background: #12C6BB;
     color: black;
 }
 .nav_item::after
@@ -105,10 +109,10 @@ header label
 @media (max-width:768px )
 {
     .nav_item
-{
-    color: rgb(0, 0, 0);
-    
-}
+    {
+        color: rgb(0, 0, 0);
+        
+    }
     .nav_label
     {
         display: block;
@@ -133,6 +137,11 @@ header label
     {
         clip-path: circle(100% at center);
     }
+    .nav ul li:hover ul
+    {
+        display: none;
+    }
+    
     main div img 
     {
         background-color: #000000;
@@ -143,6 +152,7 @@ header label
         /*align-items: center;*/
         
     }
+
 }
 
 
